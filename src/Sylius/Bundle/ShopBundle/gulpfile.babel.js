@@ -51,7 +51,7 @@ const vendorPath = upath.normalizeSafe(argv.vendorPath || '.');
 const vendorShopPath = vendorPath === '.' ? '.' : upath.joinSafe(vendorPath, 'ShopBundle');
 const vendorUiPath = vendorPath === '.' ? '../UiBundle/' : upath.joinSafe(vendorPath, 'UiBundle');
 const nodeModulesPath = upath.normalizeSafe(argv.nodeModulesPath);
-const semanticPath = upath.joinSafe(rootPath, 'semantic');
+const semanticPath = upath.joinSafe(nodeModulesPath, '../semantic');
 
 const paths = {
   shop: {
