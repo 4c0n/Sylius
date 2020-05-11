@@ -51,6 +51,7 @@ const vendorPath = upath.normalizeSafe(argv.vendorPath || '.');
 const vendorShopPath = vendorPath === '.' ? '.' : upath.joinSafe(vendorPath, 'ShopBundle');
 const vendorUiPath = vendorPath === '.' ? '../UiBundle/' : upath.joinSafe(vendorPath, 'UiBundle');
 const nodeModulesPath = upath.normalizeSafe(argv.nodeModulesPath);
+const semanticPath = upath.joinSafe(rootPath, 'semantic');
 
 const paths = {
   shop: {
@@ -63,7 +64,7 @@ const paths = {
       upath.joinSafe(vendorShopPath, 'Resources/private/sass/**'),
     ],
     css: [
-      upath.joinSafe(nodeModulesPath, 'semantic-ui-css/semantic.min.css'),
+      upath.joinSafe(semanticPath, 'dist/semantic.min.css'),
       upath.joinSafe(nodeModulesPath, 'lightbox2/dist/css/lightbox.min.css'),
       upath.joinSafe(vendorUiPath, 'Resources/private/css/**'),
       upath.joinSafe(vendorShopPath, 'Resources/private/css/**'),
@@ -193,7 +194,7 @@ buildShopJs.description = 'Build shop js assets.';
 
 export const buildShopCss = function buildShopCss() {
   const copyStream = merge(
-    gulp.src(upath.joinSafe(nodeModulesPath, 'semantic-ui-css/themes/**/*'))
+    gulp.src(upath.joinSafe(semanticPath, 'dist/themes/**/*'))
       .pipe(gulp.dest(upath.joinSafe(shopRootPath, 'css/themes'))),
   );
 

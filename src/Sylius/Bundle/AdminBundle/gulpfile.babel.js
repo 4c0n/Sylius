@@ -51,6 +51,7 @@ const vendorPath = upath.normalizeSafe(argv.vendorPath || '.');
 const vendorAdminPath = vendorPath === '.' ? '.' : upath.joinSafe(vendorPath, 'AdminBundle');
 const vendorUiPath = vendorPath === '.' ? '../UiBundle/' : upath.joinSafe(vendorPath, 'UiBundle');
 const nodeModulesPath = upath.normalizeSafe(argv.nodeModulesPath);
+const semanticPath = upath.joinSafe(rootPath, 'semantic');
 
 const paths = {
   admin: {
@@ -63,7 +64,7 @@ const paths = {
       upath.joinSafe(vendorAdminPath, 'Resources/private/sass/**'),
     ],
     css: [
-      upath.joinSafe(nodeModulesPath, 'semantic-ui-css/semantic.min.css'),
+      upath.joinSafe(semanticPath, 'dist/semantic.min.css'),
       upath.joinSafe(vendorUiPath, 'Resources/private/css/**'),
       upath.joinSafe(vendorAdminPath, 'Resources/private/css/**'),
     ],
@@ -190,7 +191,7 @@ buildAdminJs.description = 'Build admin js assets.';
 
 export const buildAdminCss = function buildAdminCss() {
   const copyStream = merge(
-    gulp.src(upath.joinSafe(nodeModulesPath, 'semantic-ui-css/themes/**/*'))
+    gulp.src(upath.joinSafe(semanticPath, 'dist/themes/**/*'))
       .pipe(gulp.dest(upath.joinSafe(adminRootPath, 'css/themes'))),
   );
 
