@@ -7,8 +7,8 @@
  * file that was distributed with this source code.
  */
 
-import 'semantic-ui-css/components/popup';
-import 'semantic-ui-css/components/rating';
+import '../../../../../../../../../../semantic/dist/components/popup';
+import '../../../../../../../../../../semantic/dist/components/rating';
 import $ from 'jquery';
 
 import 'sylius/ui/app';

@@ -7,8 +7,8 @@
  * file that was distributed with this source code.
  */
 
-import 'semantic-ui-css/components/api';
-import 'semantic-ui-css/components/checkbox';
+import '../../../../../../../../../../semantic/dist/components/api';
+import '../../../../../../../../../../semantic/dist/components/checkbox';
 import $ from 'jquery';
 
 const createRootContainer = function createRootContainer() {

@@ -7,14 +7,14 @@
  * file that was distributed with this source code.
  */
 
-import 'semantic-ui-css/components/accordion';
-import 'semantic-ui-css/components/checkbox';
-import 'semantic-ui-css/components/dimmer';
-import 'semantic-ui-css/components/dropdown';
-import 'semantic-ui-css/components/rating';
-import 'semantic-ui-css/components/sidebar';
-import 'semantic-ui-css/components/tab';
-import 'semantic-ui-css/components/transition';
+import '../../../../../../../../../../semantic/dist/components/accordion';
+import '../../../../../../../../../../semantic/dist/components/checkbox';
+import '../../../../../../../../../../semantic/dist/components/dimmer';
+import '../../../../../../../../../../semantic/dist/components/dropdown';
+import '../../../../../../../../../../semantic/dist/components/rating';
+import '../../../../../../../../../../semantic/dist/components/sidebar';
+import '../../../../../../../../../../semantic/dist/components/tab';
+import '../../../../../../../../../../semantic/dist/components/transition';
 import $ from 'jquery';
 
 import './sylius-bulk-action-require-confirmation';
